@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Example</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+    .header {
+      padding-left: 100px
+      /*color: '#' + Math.floor(Math.random()*16777215).toString(16);*/
+    }
+  </style>
+</head>
+<body>
+  <h1 id="header" onclick="toggleParagraph()">Alexander Hamilton</h1>
+  <p>Alexander Hamilton (January 11, 1755 or 1757 – July 12, 1804) was an American statesman and one of the Founding Fathers of the United States. He was an influential interpreter and promoter of the U.S. Constitution, as well as the founder of the nation's financial system, the Federalist Party, the United States Coast Guard, and The New York Post newspaper.</p>
+
+<!--   <h2 id="position">
+    You're at x: <span id="x-coord">unknown...</span>
+    You're at y: <span id="y-coord">unkown...</span>
+  </h2> -->
+
+  <button onclick="randColor()">
+    PRESTO CHANGO!
+  </button>
+
+  <script>
+
+// function doSomething() {
+//   console.log("Hey! Stop it!!!");
+// }
+
+// function somethingElse() {
+//   console.log("Well, that's fine");
+// }
+
+// function getCoordinates(event) {
+//   var x = document.querySelector("#x-coord");
+//   var y = document.querySelector("#y-coord");
+//   console.log("You're at X: " + event.clientX + " and Y: " + event.clientY);
+//   x.innerText = event.clientX;
+//   y.innerText = event.clientY;
+
+// }
+
+function toggleParagraph() {
+  var pTag = document.querySelector('p');
+  pTag.classList.toggle("hidden");
+}
+
+function toggleHeader() {
+  var title = document.querySelector("h1");
+  title.classList.toggle("header");
+}
+
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  console.log(color);
+  return color;
+}
+
+
+function randColor() {
+  document.getElementById("header").style.color = getRandomColor();
+}
+
+  </script>
+</body>
+</html>

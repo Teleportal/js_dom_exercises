@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Example</title>
+  <style>
+    .complete {
+      text-decoration: line-through;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <p onclick="completeTask(this)">Pay bills</p>
+  <p onclick="completeTask(this)">Wash car</p>
+  <p onclick="completeTask(this)">Get laundry</p>
+
+  <button onclick="">
+    Hide completed tasks
+  </button>
+
+
+  <script>
+    
+    function completeTask(task) {
+      task.classList.toggle('complete');
+    }
+
+  </script>
+</body>
+</html>
